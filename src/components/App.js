@@ -16,6 +16,7 @@ class App extends Component {
         this.props.addReminder(this.state.text);
     }
     render(){
+        console.log('this.props', this.props)
         return(
             <div className="app">
                 <div className="title">
@@ -42,6 +43,10 @@ class App extends Component {
     }
 }
 
+function mapStateToProps(state){
+    return {
+        reminders: state
+    }
+}
 
-
-export default connect(null, {addReminder})(App);
+export default connect(mapStateToProps, {addReminder})(App);
