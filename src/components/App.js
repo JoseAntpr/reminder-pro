@@ -20,6 +20,7 @@ class App extends Component {
     deleteReminder(id){
         console.log('deleting in aplication', id);
         console.log('tis.props', this.props)
+        this.props.deleteReminder(id);
     }
 
     renderReminders(){
